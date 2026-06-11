@@ -1,0 +1,428 @@
+/* =========================
+   GLOBAL
+========================= */
+
+body{
+    min-height:100vh;
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+
+    background:linear-gradient(
+        135deg,
+        #667eea,
+        #764ba2
+    );
+
+    color:#333;
+}
+
+a{
+    text-decoration:none;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+    background:#111827 !important;
+}
+
+.navbar-brand{
+    font-weight:700;
+    font-size:1.3rem;
+}
+
+/* =========================
+   HOME PAGE
+========================= */
+
+.hero-container{
+    min-height:85vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:30px;
+}
+
+.hero-card{
+    background:white;
+
+    max-width:800px;
+    width:100%;
+
+    text-align:center;
+
+    padding:60px;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.15);
+}
+
+.hero-card h1{
+    color:#764ba2;
+    font-weight:700;
+}
+
+/* =========================
+   LOGIN & REGISTER
+========================= */
+
+.auth-container{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+}
+
+.auth-card{
+
+    width:100%;
+    max-width:500px;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.15);
+}
+
+.auth-card h2{
+    color:#764ba2;
+    font-weight:700;
+}
+
+.app-name{
+    color:#764ba2;
+    font-weight:700;
+    font-size:2.2rem;
+}
+
+/* =========================
+   DASHBOARD
+========================= */
+
+.dashboard-container{
+    min-height:80vh;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    padding:40px;
+}
+
+.dashboard-card{
+    background:white;
+
+    max-width:800px;
+    width:100%;
+
+    padding:60px;
+
+    text-align:center;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.15);
+}
+
+.dashboard-card h1{
+    color:#764ba2;
+    font-weight:700;
+}
+
+/* =========================
+   CHAT ROOM
+========================= */
+
+.sidebar{
+    background:rgba(255,255,255,.95);
+
+    backdrop-filter:blur(12px);
+
+    min-height:100vh;
+
+    padding:25px;
+
+    box-shadow:
+    0 0 20px rgba(0,0,0,.1);
+}
+
+.chat-section{
+    display:flex;
+    flex-direction:column;
+
+    padding:20px;
+
+    height:100vh;
+}
+
+.chat-header{
+    background:white;
+
+    padding:15px;
+
+    border-radius:15px;
+
+    margin-bottom:15px;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,.1);
+}
+
+#chat-box{
+    flex:1;
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:20px;
+
+    overflow-y:auto;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,.1);
+}
+
+.message{
+    padding:12px;
+
+    margin-bottom:12px;
+
+    border-radius:12px;
+
+    max-width:75%;
+
+    word-wrap:break-word;
+}
+
+.own-message{
+    background:#198754;
+
+    color:white;
+
+    margin-left:auto;
+}
+
+.other-message{
+    background:#e9ecef;
+
+    color:black;
+
+    margin-right:auto;
+}
+
+.timestamp{
+    font-size:12px;
+
+    opacity:.7;
+
+    margin-top:5px;
+
+    text-align:right;
+}
+
+#typing-indicator{
+    height:25px;
+
+    margin-top:10px;
+
+    color:white;
+
+    font-style:italic;
+}
+
+/* =========================
+   ONLINE USERS
+========================= */
+
+.list-group-item{
+    border:none;
+    background:transparent;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer-section{
+    background:#0f172a;
+
+    color:white;
+
+    padding:50px 0 20px;
+}
+
+.footer-links{
+    list-style:none;
+    padding-left:0;
+}
+
+.footer-links li{
+    margin-bottom:8px;
+}
+
+.footer-links a{
+    color:#cbd5e1;
+}
+
+.footer-links a:hover{
+    color:white;
+}
+
+.footer-bottom{
+    border-top:1px solid #334155;
+
+    margin-top:30px;
+
+    padding-top:15px;
+
+    text-align:center;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn{
+    border-radius:10px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    /* General */
+
+    body {
+        overflow-x: hidden;
+    }
+
+    /* Auth Pages */
+
+    .auth-card {
+        width: 100%;
+        max-width: 95%;
+        padding: 25px;
+    }
+
+    .app-name {
+        font-size: 1.8rem;
+    }
+
+    /* Home */
+
+    .hero-card {
+        width: 95%;
+        padding: 30px 20px;
+    }
+
+    .hero-card h1 {
+        font-size: 2rem;
+    }
+
+    /* Dashboard */
+
+    .dashboard-card {
+        width: 95%;
+        padding: 30px 20px;
+    }
+
+    .dashboard-card h1 {
+        font-size: 2rem;
+    }
+
+    /* Navbar */
+
+    .navbar-brand {
+        font-size: 1rem;
+    }
+
+    .navbar-nav {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .nav-item {
+        margin-bottom: 8px;
+    }
+
+    /* Chat Layout */
+
+    .sidebar {
+        min-height: auto;
+        margin-bottom: 15px;
+        border-radius: 15px;
+    }
+
+    .chat-section {
+        height: auto;
+        padding: 10px;
+    }
+
+    .chat-header {
+        text-align: center;
+    }
+
+    #chat-box {
+        height: 55vh;
+        padding: 15px;
+    }
+
+    /* Messages */
+
+    .message {
+        max-width: 90%;
+        font-size: 14px;
+    }
+
+    /* Input Area */
+
+    .input-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .input-group input {
+        width: 100%;
+    }
+
+    .input-group button {
+        width: 100%;
+    }
+
+    /* Footer */
+
+    .footer-section {
+        text-align: center;
+    }
+
+    .footer-section .col-md-4,
+    .footer-section .col-md-3,
+    .footer-section .col-md-2 {
+        margin-bottom: 30px;
+    }
+
+    .footer-links li {
+        margin-bottom: 12px;
+    }
+}
