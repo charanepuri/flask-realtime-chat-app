@@ -27,16 +27,6 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///chat.db'
 
 db.init_app(app)
 
-login_manager = LoginManager()
-login_manager.init_app(app)
-
-login_manager.login_view = 'login'
-
-@login_manager.user_loader
-def load_user(user_id):
-    return User.query.get(int(user_id))
-
-
 socketio = SocketIO(
     app,
     cors_allowed_origins="*",
@@ -232,10 +222,11 @@ def handle_join_room(data):
         to=room
     )            
 
+import os
+
 if __name__ == "__main__":
     socketio.run(
         app,
         host="0.0.0.0",
-        port=5000,
-        debug=True
+        port=int(os.environ.get("PORT", 5000))
     )
